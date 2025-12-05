@@ -1,0 +1,100 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+   color: rgb(0, 0, 0);
+   text-decoration-line: none;
+    text-decoration-color: white;
+ }
+ a{
+  text-decoration: none;
+color: black;
+ }
+ .logo-name {
+   font-family:"Supermercado One", sans-serif;
+   font-weight: 450px;
+   font-size: 30px;
+ }
+ 
+ .logo {
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-left: 30px;
+   cursor: pointer;
+   margin-right: 15px;
+ }
+ 
+ .navbar {
+   padding-top: 8px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between; 
+   background-color: rgb(255, 255, 255);
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   height: 80px;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-color: rgb(197, 197, 197);
+   z-index: 2;
+  
+ }
+ 
+ .navbar-list {
+   display: inline-block;
+   list-style: none;
+   position: relative;
+   color: black;
+   margin-right: 30px;
+   font-weight: bold;
+   transition: .1s;
+ }
+
+
+ .navbar ul li a {
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+   text-transform: uppercase;
+ }
+ 
+ /* .navbar-list ::after {
+   content: '';
+   height: 3px;
+   width: 0;
+   background: black;
+   position: absolute;
+   left: 0;
+   bottom: -10px;
+   transition: 0.7s;
+ } */
+  .navbar-list:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(238, 224, 30);
+  text-decoration-thickness: 7px;
+  text-underline-offset: 5px;
+}
+ /* .navbar-list :hover::after {
+   width: 100%;
+ } */
+ 
+ .image {
+ 
+   width: 93%;
+   height: 550px;
+   object-fit: cover;
+   padding-left: 80px;
+   padding-right: 10px;
+   display: flex;
+   flex-direction: row;
+   
+ }
+
+ 
