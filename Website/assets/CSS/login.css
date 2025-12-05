@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+/* Navbar */
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+   color: rgb(0, 0, 0);
+   text-decoration-line: none;
+    text-decoration-color: white;
+ }
+ a{
+  text-decoration: none;
+  color: black;
+ }
+ .logo-name {
+   font-family:"Supermercado One", sans-serif;
+   font-weight: 450px;
+   font-size: 30px;
+ }
+ 
+ .logo {
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-left: 30px;
+   cursor: pointer;
+   margin-right: 15px;
+ }
+ 
+ .navbar {
+   padding-top: 8px;
+   padding-left: 50px;
+   padding-right: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between; 
+   background-color: rgb(255, 255, 255);
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   height: 80px;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-color: rgb(197, 197, 197);
+   z-index: 2;
+  
+ }
+ 
+ .navbar-list {
+   display: inline-block;
+   list-style: none;
+   position: relative;
+   color: black;
+   margin-left: 10px;
+   margin-right: 30px;
+   font-weight: bold;
+   transition: .1s;
+ }
+
+
+ .navbar ul li a {
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+   text-transform: uppercase;
+ }
+ 
+ /* .navbar-list ::after {
+   content: '';
+   height: 3px;
+   width: 0;
+   background: black;
+   position: absolute;
+   left: 0;
+   bottom: -10px;
+   transition: 0.7s;
+ } */
+  .navbar-list:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(238, 224, 30);
+  text-decoration-thickness: 7px;
+  text-underline-offset: 5px;
+}
+ /* .navbar-list :hover::after {
+   width: 100%;
+ } */
+ 
+ .image {
+   width: 90%;
+   height: 550px;
+   object-fit: cover;
+   padding-left: 80px;
+   padding-right: 10px;
+   display: flex;
+   flex-direction: row;
+   
+ }
+ 
+
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(131, 17, 17, 0.1);
+}
+
+.login-box h2 {
+  margin: 0 0 15px;
+  padding: 0;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.user-box {
+  position: relative;
+margin-top: 10px;
+}
+
+.user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  background: transparent;
+}
+
+.user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #333;
+}
+
+button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #000;
+  color: grey;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+button span {
+  position: absolute;
+  display: block;
+}
+
+button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #333;
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #0a7668;
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-toggle-icon i {
+  font-size: 18px;
+  line-height: 1;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.password-toggle-icon i:hover {
+  color: #000000;
+}
+
+.container .remember-forgot{
+  display: flex;
+  justify-content: space-between ;
+  font-size: 15px;
+  margin: -15px 0 15px;
+}
+.submit{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#error-message{
+  text-align: center;
+  margin-bottom: 10px;
+}
