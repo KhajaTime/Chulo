@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style -->
+    <link rel="stylesheet" href="assets/CSS/homepage.css" />
+    <link rel="stylesheet" href="assets/CSS/responsive.css" />
+    <link rel="stylesheet" href="assets/CSS/navbar.css" />
+    <!-- descriptions -->
+    <link rel="stylesheet" href="assets/CSS/food-description.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/logo/Logodrk.jpg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Supermercado+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Supermercado+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Homepage</title>
+
+    <script>
+      // Smooth Scrolling JS
+      console.log("Smooth scroll initializing...");
+      function smoothScrollWithOffset(target) {
+        const element = document.querySelector(target);
+        if (!element) {
+          console.log("Element not found:", target);
+          return;
+        }
+        const navbar = document.querySelector(".navbar");
+        const categoriesBar = document.querySelector(".name");
+        const navbarHeight = navbar ? navbar.offsetHeight : 0;
+        const categoriesHeight = categoriesBar ? categoriesBar.offsetHeight : 0;
+        const totalOffset = navbarHeight + categoriesHeight + 30;
+        const elementPosition =
+          element.getBoundingClientRect().top + window.pageYOffset;
+        const targetPosition = elementPosition - totalOffset;
+        console.log("Scrolling to position:", targetPosition);
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebarLinks = document.querySelectorAll(
+          '.sidebar-list a[href^="#"]'
+        );
+        console.log("Found sidebar links:", sidebarLinks.length);
+        sidebarLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const target = this.getAttribute("href");
+            console.log("Clicked:", target);
+            smoothScrollWithOffset(target);
+          });
+        });
+      });
+    </script>
+  </head>
+
+  <body id="home-link">
+    <div class="navbar" style="font-size: larger">
+      <a href="index.html">
+        <div class="logo-container">
+          <img class="logo" src="assets/images/logo/Logodrk.jpg" />
+          <p class="logo-name">Chulo</p>
+        </div>
+      </a>
+      <ul>
+        <li class="navbar-list" id="navhome"><a href="#home-link" id="navhome">Home</a></li>
+        <li class="navbar-list" id="navtrending">
+          <a href="#Trending">Trending</a>
+        </li>
+        <li class="navbar-list" id="navabout">
+          <a href="AboutUS.html">About Us</a>
+        </li>
+        <li class="navbar-list" id="navprofile">
+          <a href="signup.html"
+            ><i class="fas fa-user-alt" style="scale: 1.4"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="topimage">
+      <img class="image" src="assets/images/food-pictures/chickenBurger.jfif" />
+    </div>
+    <div class="name">
+      <p class="content-bar"><p id="categories">CATEGORIES</p></p>
+    </div>
+
+    <div class="food-preview-container">
+      <div class="sidebar">
+        <ul>
+          <li class="sidebar-list">
+            <a href="#Around-The-Globe">Around The Globe</a>
+          </li>
+          <li class="sidebar-list"><a href="#Trending">Trending</a></li>
+          <li class="sidebar-list"><a href="#Dessert">Dessert</a></li>
+          <li class="sidebar-list"><a href="#Healthy">Healthy Option</a></li>
+          <li class="sidebar-list"><a href="#Desi">Desi food</a></li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+        <!-- Around The Globe -->
+        <div class="food-item-list" id="Around-The-Globe">
+          <br />
+          <div class="food-type-name">AROUND THE GLOBE</div>
+        </div>
+        <div class="food-1-preview"></div>
+
+        <!-- Trending -->
+        <div class="food-type-name" id="Trending">Trending</div>
+        <div class="food-1-preview"></div>
+
+        <!-- Dessert -->
+        <div class="food-type-name" id="Dessert">DESSERT</div>
+        <div class="food-1-preview"></div>
+
+        <!-- Healthy -->
+        <div class="food-type-name" id="Healthy">Healthy Option</div>
+        <div class="food-1-preview"></div>
+
+        <!-- Desi -->
+        <div class="food-type-name" id="Desi">Desi Foods</div>
+        <div class="food-1-preview"></div>
+      </div>
+    </div>
+    <!-- Dialog -->
+    <dialog
+      id="dialog"
+      style="
+        max-width: 140vh;
+        min-height: 70vh;
+        margin: auto;
+        border-radius: 24px;
+        border: none;
+      "
+    >
+      <button class="dialog-close-btn" onclick="closeDialog()">×</button>
+      <div class="food-description-container" id="desc">
+        <div class="food-picture-container" style="max-width: 600px">
+          <img class="food-description-picture" src="" />
+        </div>
+
+        <div class="food-description" style="margin-left: 20px">
+          <div class="food-name">Chicken Burger</div>
+
+          <div class="food-price">
+            <div class="original-price">&#x20B9; 190</div>
+            <div class="discounted-price">&#x20B9; 140</div>
+          </div>
+
+          <button class="buy-button">Buy</button>
+
+          <div class="description">
+            <div class="description-heading">DETAILS ABOUT THIS MEAL</div>
+            <div class="description-content"></div>
+
+            <div class="veg-non-veg">
+              <img
+                class="food-sticker"
+                src="assets/images/food-pictures/icn-non-veg.svg"
+              />
+              <div class="veg-non">Non-veg</div>
+            </div>
+
+            <div class="ingredients-heading">INGREDIENTS</div>
+            <div class="ingredients-content"></div>
+          </div>
+
+          <div class="nutrients-heading">NUTRIENTS</div>
+          <div class="nutrients-content">
+            <div class="nutrients-value">
+              <div class="nutrients-number">450</div>
+              <div>Energy (kcl)</div>
+            </div>
+            <div class="nutrients-value">
+              <div class="nutrients-number">20</div>
+              <div>Fats (g)</div>
+            </div>
+            <div class="nutrients-value">
+              <div class="nutrients-number">35</div>
+              <div>Carbs (g)</div>
+            </div>
+            <div class="nutrients-value">
+              <div class="nutrients-number">4</div>
+              <div>Fiber (g)</div>
+            </div>
+            <div class="nutrients-value">
+              <div class="nutrients-number">37</div>
+              <div>Protein (g)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="assets/Backend/descriptions.js"></script>
+    <script>
+      const categories = {
+        "Around-The-Globe": [1, 2, 3, 4, 5],
+        Trending: [4, 2, 3, 1, 6],
+        Dessert: [7, 8, 9, 10],
+        Healthy: [11, 12, 13, 14, 15],
+        Desi: [16, 17, 18],
+      };
+      function createFoodItemHTML(item, showRank = false, rank = null) {
+        const originalPriceDisplay = showRank
+          ? `#${rank}`
+          : `&#x20B9; ${item.originalPrice}`;
+
+        return `
+      <div class="food-preview">
+        <a onclick="showDialog(${item.id})">
+          <div>
+            <img class="food-picture" src="assets/images/food-pictures/${item.image}" alt="${item.name}">
+          </div>
+          <div class="food-description">
+            <p class="food-name">${item.name}</p>
+            <div class="food-sub-description">
+              <p class="food-price">&#x20B9; ${item.price}</p>
+              <p class="food-original-price">${originalPriceDisplay}</p>
+              <div class="food-stock">
+                <button class="buy-button">Buy</button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    `;
+      }
+      function renderCategory(categoryId, itemIds, showRanks = false) {
+        const container = document.getElementById(categoryId);
+
+        if (!container) {
+          console.error(`Container with id "${categoryId}" not found`);
+          return;
+        }
+
+        let previewContainer = container.nextElementSibling;
+
+        while (
+          previewContainer &&
+          !previewContainer.classList.contains("food-1-preview")
+        ) {
+          previewContainer = previewContainer.nextElementSibling;
+        }
+
+        if (!previewContainer) {
+          console.error(
+            `Preview container not found for category "${categoryId}"`
+          );
+          return;
+        }
+
+        previewContainer.innerHTML = "";
+
+        itemIds.forEach((itemId, index) => {
+          const item = foodItems.find((food) => food.id === itemId);
+          if (item) {
+            const rank = showRanks ? index + 1 : null;
+            previewContainer.innerHTML += createFoodItemHTML(
+              item,
+              showRanks,
+              rank
+            );
+          }
+        });
+      }
+      function renderAllCategories() {
+        renderCategory("Around-The-Globe", categories["Around-The-Globe"]);
+        renderCategory("Trending", categories["Trending"], true);
+        renderCategory("Dessert", categories["Dessert"]);
+        renderCategory("Healthy", categories["Healthy"]);
+        renderCategory("Desi", categories["Desi"]);
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        renderAllCategories();
+      });
+    </script>
+  </body>
+</html>
