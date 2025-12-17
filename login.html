@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="loginpage/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/CSS/login.css" />
+    <link rel="stylesheet" href="assets/CSS/navbar.css" />
+  </head>
+
+  <body>
+    <div class="navbar" style="font-size: larger">
+      <a href="index.html">
+        <div class="logo-container">
+          <img class="logo" src="assets/images/logo/Logodrk.jpg" />
+          <p class="logo-name">Chulo</p>
+        </div>
+      </a>
+      <ul>
+        <li class="navbar-list" id="navhome"><a href="index.html">Home</a></li>
+        <li class="navbar-list" id="navtrending">
+          <a href="index.html#Trending">Trending</a>
+        </li>
+        <li class="navbar-list" id="navabout">
+          <a href="AboutUS.html">About Us</a>
+        </li>
+        <li class="navbar-list" id="navprofile">
+          <a href="signup.html"
+            ><i class="fas fa-user-alt" style="scale: 1.4"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="login-box">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="user-box">
+            <input type="text" id="username" name="username" required />
+            <label>Username <i class="bx bxs-user"></i></label>
+          </div>
+
+          <div class="user-box" style="margin-bottom: 0">
+            <input type="password" id="password" name="password" required />
+            <label>Password <i class="bx bxs-lock-alt"></i></label>
+            <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+          </div>
+          <h5 style="margin-top: 0px; margin-bottom: 10px">
+            Don't have an account? <a href="signup.html">Sign Up</a>
+          </h5>
+          <span id="error-message" style="color: red; display: none"
+            >Incorrect login</span
+          >
+          <div class="submit">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="loginpage/login.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

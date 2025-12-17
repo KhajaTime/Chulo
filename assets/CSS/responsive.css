@@ -1,0 +1,378 @@
+
+/* DESKTOP & TABLET (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+  /* Hide sidebar on all screens below desktop */
+  .sidebar {
+    display: none !important;
+  }
+  
+  .food-1-preview {
+    padding-left: 40px !important;
+  }
+  
+  .food-type-name {
+    margin-left: 80px !important;
+  }
+}
+
+/* TABLET (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  
+  /* Navbar */
+  .navbar {
+    height: 80px;
+    padding: 0 10px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+  }
+
+  .logo-name {
+    font-size: 24px;
+  }
+
+  .navbar-list {
+    margin-right: 20px;
+    font-size: 14px;
+  }
+
+  /* Top image */
+  .image {
+    width: 95%;
+    height: 400px;
+    padding-left: 40px;
+  }
+
+  /* Categories bar */
+  .name {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 90%;
+  }
+
+  /* Food preview */
+  .food-preview-container {
+    justify-content: center;
+  }
+
+  .food-item-list {
+    margin-left: 40px;
+  }
+
+  #AroundTheGlobe {
+    width: 90%;
+    height: 120px;
+  }
+
+  .food-type-name {
+    margin-left: 40px;
+  }
+
+  .food-1-preview {
+    padding-left: 20px;
+    justify-content: center;
+  }
+
+  .food-preview {
+    width: 280px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  /* Dialog */
+  dialog {
+    max-width: 90vw !important;
+    min-height: 60vh !important;
+  }
+
+  .food-description-container {
+    flex-direction: column;
+  }
+
+  .food-picture-container {
+    max-width: 100% !important;
+  }
+
+  .food-description {
+    margin-left: 0 !important;
+    margin-top: 20px;
+  }
+}
+
+/* MOBILE (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  
+  /* Body */
+  body {
+    margin-top: 70px !important;
+  }
+
+  /* Navbar - Hide links except profile */
+  .navbar {
+    height: 70px !important;
+    padding: 0 10px;
+  }
+
+  .navbar #navhome,
+  .navbar #navtrending,
+  .navbar #navabout {
+    display: none !important;
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+
+  .logo-name {
+    font-size: 20px;
+  }
+
+  /* Hide top image and category bar */
+  .topimage {
+    display: none !important;
+  }
+
+  .name {
+    display: none !important;
+  }
+
+  /* Scroll behavior */
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  /* Food sections */
+  .food-preview-container {
+    padding-top: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .food-item-list {
+    margin-left: 10px;
+    width: 95%;
+    padding-top: 20px;
+  }
+
+  #AroundTheGlobe {
+    display: none !important;
+  }
+
+  .food-type-name-1 {
+    font-size: 24px;
+    padding-top: 20px;
+  }
+
+  .food-type-name {
+    margin-left: 10px;
+    font-size: 24px;
+  }
+
+  /* Food grid - 2 columns */
+  .food-1-preview {
+    width: 100%;
+    padding-left: 0 !important;
+    margin: 0;
+    padding-top: 20px;
+    justify-content: center;
+  }
+
+  .food-preview {
+    width: calc(50% - 20px);
+    min-width: 150px;
+    max-width: 200px;
+    margin: 10px;
+  }
+
+  .food-picture {
+    max-height: 120px;
+  }
+
+  .food-name {
+    font-size: 16px;
+    padding-top: 8px;
+  }
+
+  .food-price {
+    font-size: 14px;
+  }
+
+  .food-original-price {
+    font-size: 12px;
+    margin-left: 10px;
+    padding-right: 20px;
+  }
+
+  .buy-button {
+    margin-left: 0;
+    padding: 8px 15px;
+    font-size: 11px;
+  }
+
+  /* Dialog */
+  dialog {
+    max-width: 95vw !important;
+    min-height: auto !important;
+    margin: 10px !important;
+  }
+
+  .food-description-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .food-picture-container {
+    max-width: 100% !important;
+  }
+
+  .food-description-picture {
+    width: 100%;
+    height: auto;
+  }
+
+  .food-description {
+    margin-left: 0 !important;
+    padding: 10px;
+  }
+
+  .description-heading,
+  .ingredients-heading,
+  .nutrients-heading {
+    font-size: 16px;
+  }
+
+  .description-content,
+  .ingredients-content {
+    font-size: 14px;
+  }
+
+  .nutrients-content {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .nutrients-value {
+    min-width: 80px;
+    margin: 10px;
+  }
+}
+
+/* SMALL MOBILE (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  
+  body {
+    margin-top: 60px !important;
+  }
+
+  /* Navbar */
+  .navbar {
+    height: 80px !important;
+  }
+
+  .logo {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 8px;
+  }
+
+  .logo-name {
+    font-size: 18px;
+  }
+
+  .fas.fa-user-alt {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  /* Food sections */
+  .food-item-list {
+    margin-left: 5px;
+    padding-top: 20px;
+  }
+
+  .food-type-name-1,
+  .food-type-name {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+
+  /* Single column layout */
+  .food-preview {
+    width: calc(100% - 20px);
+    max-width: 300px;
+  }
+
+  .food-picture {
+    max-height: 150px;
+  }
+
+  .food-name {
+    font-size: 18px;
+  }
+
+  .food-sub-description {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .food-price,
+  .food-original-price {
+    padding-bottom: 10px;
+    margin-left: 0;
+  }
+
+  .buy-button {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  /* Dialog */
+  .nutrients-value {
+    min-width: 70px;
+    font-size: 12px;
+  }
+
+  .nutrients-number {
+    font-size: 18px;
+  }
+}
+
+/* VERY SMALL MOBILE (max-width: 360px) */
+@media screen and (max-width: 360px) {
+ 
+  .logo-name {
+    display: none;
+  }
+
+  .food-name {
+    font-size: 16px;
+  }
+
+  .food-price {
+    font-size: 14px;
+  }
+}
+
+/* LANDSCAPE ORIENTATION */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  
+  body {
+    margin-top: 50px !important;
+  }
+
+  .navbar {
+    height: 50px !important;
+  }
+
+  dialog {
+    max-height: 90vh !important;
+    overflow-y: auto;
+  }
+}

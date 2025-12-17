@@ -1,0 +1,98 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+   color: rgb(0, 0, 0);
+   text-decoration-line: none;
+    text-decoration-color: white;
+ }
+ a{
+  text-decoration: none;
+color: black;
+ }
+ .logo-name {
+   font-family:"Supermercado One", sans-serif;
+   font-weight: 450px;
+   font-size: 30px;
+ }
+ 
+ .logo {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-left: 30px;
+   cursor: pointer;
+   margin-right: 15px;
+ }
+ 
+ .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 70px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: rgb(197, 197, 197);
+  z-index: 100;}
+ 
+ .navbar-list {
+   display: inline-block;
+   list-style: none;
+   position: relative;
+   color: black;
+   margin-right: 30px;
+   font-weight: bold;
+   transition: .1s;
+ }
+
+
+ .navbar ul li a {
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+   text-transform: uppercase;
+   text-decoration-color:white ;
+ }
+ 
+.navbar-list ::after {
+   content: '';
+   height: 3px;
+   width: 0;
+   background: rgb(247, 210, 25);
+   position: relative;
+   left: 0;
+   bottom: -10px;
+   transition: 0.7s;
+ } 
+.navbar-list {
+   position: relative; /* Add this! */
+}
+
+.navbar-list::after {
+   content: '';
+   height: 3px;
+   width: 0;
+   background: rgb(247, 210, 25);
+   position: absolute;
+   left: 0;
+   bottom: -10px;
+   transition: 0.7s;
+} 
+
+.navbar-list:hover::after {
+   width: 100%;
+}
+
+#navprofile::after {
+   content: none; /* This removes the underline for the profile icon */
+}
+

@@ -1,0 +1,186 @@
+Around the globe
+{
+    chicken burger
+    Cheese pizza
+    Chicken momo
+    Buff momo
+    Fried chicken
+
+}
+Trending
+{
+    Buff momo #1
+    Cheese pizza #2
+    chicken momo #3
+    Chicken burger #4
+    Bubble Tea #5
+
+
+}
+Dessert
+{
+    Lakhamari
+    Juju Dhau
+    Jerry
+    Rasbari
+
+}
+Healthy option{
+    Lentil Soup
+    Veggie Stir-Fry
+    Grilled Chicken
+    Fresh Juices
+    Lentil Pancake
+
+}
+Nepali Cuisines{
+    Chicken momo
+    Buff momo
+    Thakali khaja set
+    Newari Khaja
+    Chhwela
+}
+Others{
+    Bubble Tea
+    Cold Drinks = {Coca Cola, Fanta, Sprite , Mountain dew}
+}
+
+=====================================================
+FOOD WEBSITE PROJECT DATA COMPILATION (SHORTER VERSION)
+=====================================================
+
+---
+SECTION: AROUND THE GLOBE
+---
+
+1. Chicken Burger //done
+Description: A classic sandwich featuring a grilled or fried chicken patty served in a bun with fresh toppings and savory sauces. A versatile and popular alternative to beef burgers globally.
+Ingredients: Chicken breast patty, lettuce, tomatoes, pickles, cheese, toasted bun, mayonnaise, ketchup, signature sauce.
+Nutrients (Est.): Energy: 450 kcal | Fats: 20 g | Carbs: 35 g | Fiber: 4 g | Protein: 37 g
+
+2. Cheese Pizza (Slice)
+Description: The quintessential comfort food: dough topped with rich tomato sauce and a generous blanket of melted mozzarella cheese. Celebrated for its simple, perfect blend of textures and flavors.
+Ingredients: Pizza dough (flour, yeast), tomato sauce (tomatoes, herbs), mozzarella cheese, olive oil.
+Nutrients (Est.): Energy: 280 kcal | Fats: 10 g | Carbs: 32 g | Fiber: 2 g | Protein: 13 g
+
+3. Chicken Momo (5-6 pieces)
+Description: Delicious, bite-sized Himalayan dumplings (Nepal, Tibet, India) filled with seasoned minced chicken, commonly served steamed with a spicy dipping sauce.
+Ingredients: Flour dough, minced chicken, onions, ginger, garlic, coriander, spices (cumin, turmeric), oil.
+Nutrients (Est.): Energy: 320 kcal | Fats: 12 g | Carbs: 30 g | Fiber: 3 g | Protein: 25 g
+
+4. Buff Momo (5-6 pieces)
+Description: Savory Nepali dumplings filled with finely minced and richly spiced buffalo meat (buff). Offers a distinct, aromatic flavor profile, popular as street food.
+Ingredients: Flour dough, minced buffalo meat, onions, ginger, garlic, coriander, spices (cumin, turmeric), oil.
+Nutrients (Est.): Energy: 360 kcal | Fats: 18 g | Carbs: 30 g | Fiber: 3 g | Protein: 22 g
+
+5. Fried Chicken (1 piece)
+Description: Globally recognized dish of chicken pieces coated in seasoned batter and deep-fried, resulting in a crispy, golden-brown exterior and tender, juicy meat inside.
+Ingredients: Chicken piece, wheat flour, seasoning (salt, pepper), egg, buttermilk, deep-frying oil.
+Nutrients (Est.): Energy: 280 kcal | Fats: 18 g | Carbs: 12 g | Fiber: 1 g | Protein: 18 g
+
+---
+SECTION: TRENDING
+---
+*(Descriptions for repeated items found above.)*
+
+1. Buff Momo #1 (Est.): Energy: 360 kcal | Fats: 18 g | Carbs: 30 g | Fiber: 3 g | Protein: 22 g
+2. Cheese Pizza #2 (Est.): Energy: 280 kcal | Fats: 10 g | Carbs: 32 g | Fiber: 2 g | Protein: 13 g
+3. Chicken Momo #3 (Est.): Energy: 320 kcal | Fats: 12 g | Carbs: 30 g | Fiber: 3 g | Protein: 25 g
+4. Chicken Burger #4 (Est.): Energy: 450 kcal | Fats: 20 g | Carbs: 35 g | Fiber: 4 g | Protein: 37 g
+
+5. Bubble Tea #5 (Milk Tea with Pearls)
+Description: Trending Taiwanese tea-based drink with signature chewy tapioca pearls (boba). Available in various milk and fruit tea flavors, offering a unique, sweet drinking experience.
+Ingredients: Black tea, milk, sugar/syrup, tapioca pearls (boba), ice.
+Nutrients (Est. 16oz): Energy: 350 kcal | Fats: 8 g | Carbs: 65 g | Fiber: 1 g | Protein: 2 g
+
+---
+SECTION: DESSERT
+---
+
+1. Lakhamari (Per piece)
+Description: Large, decorative, semi-sweet traditional Newari bread, deep-fried and often used ceremonially during festivals and weddings in Nepal.
+Ingredients: Wheat/rice flour, ghee or oil, sugar, yeast/leavening agent, water.
+Nutrients (Est.): Energy: 300 kcal | Fats: 15 g | Carbs: 35 g | Fiber: 1 g | Protein: 4 g
+
+2. Juju Dhau (Small serving)
+Description: Known as the "King of Yogurt," this specialty from Bhaktapur, Nepal, is a creamy, sweet, and rich curd traditionally set in clay pots.
+Ingredients: Cow's milk, starter culture (yogurt), sugar/jaggery.
+Nutrients (Est.): Energy: 180 kcal | Fats: 10 g | Carbs: 14 g | Fiber: 0 g | Protein: 8 g
+
+3. Jerry (Jalebi, 2 pieces)
+Description: A famous South Asian sweet made by deep-frying flour batter coils and soaking them immediately in warm sugar syrup for a crunchy, intensely syrupy finish.
+Ingredients: Maida (flour), yogurt, sugar, water, cardamom, oil for frying.
+Nutrients (Est.): Energy: 250 kcal | Fats: 12 g | Carbs: 35 g | Fiber: 0 g | Protein: 2 g
+
+4. Rasbari (2 pieces)
+Description: Soft, spongy cheese balls (chhena/paneer) delicately cooked in a light, fragrant sugar syrup. Cherished for its delicate sweetness and melt-in-mouth texture.
+Ingredients: Chhena (fresh cheese), sugar, water, cardamom, rose water.
+Nutrients (Est.): Energy: 150 kcal | Fats: 6 g | Carbs: 20 g | Fiber: 0 g | Protein: 4 g
+
+---
+SECTION: HEALTHY OPTION
+---
+
+1. Lentil Soup (Per bowl)
+Description: A highly nourishing, hearty, and protein-packed soup made from various lentils simmered with vegetables and mild spices. A low-fat, high-fiber meal.
+Ingredients: Lentils (red/brown), vegetable broth, carrots, celery, onion, garlic, herbs (thyme, bay leaf), olive oil.
+Nutrients (Est.): Energy: 200 kcal | Fats: 4 g | Carbs: 30 g | Fiber: 10 g | Protein: 12 g
+
+2. Veggie Stir-Fry (Per serving)
+Description: A vibrant, customizable dish of fresh vegetables rapidly cooked in a wok with minimal healthy oil and light, savory seasoning. Excellent source of vitamins and fiber.
+Ingredients: Broccoli, bell peppers, carrots, snap peas, mushrooms, soy sauce (low sodium), ginger, garlic, sesame oil.
+Nutrients (Est.): Energy: 150 kcal | Fats: 5 g | Carbs: 20 g | Fiber: 6 g | Protein: 5 g
+
+3. Grilled Chicken (4oz breast)
+Description: Lean, protein-packed, skinless chicken breast cooked over a grill with minimal fat. A staple for health-conscious diets, seasoned with herbs and spices.
+Ingredients: Skinless chicken breast, minimal olive oil, lemon juice, herbs (rosemary, oregano), salt, pepper.
+Nutrients (Est.): Energy: 180 kcal | Fats: 4 g | Carbs: 0 g | Fiber: 0 g | Protein: 35 g
+
+4. Fresh Juices (8oz)
+Description: Naturally refreshing beverages made from the pure extracted liquid of fresh fruits and vegetables, providing concentrated vitamins and hydration without added sugars.
+Ingredients: Freshly squeezed fruit (e.g., oranges, apples) or vegetable pulp, water (optional).
+Nutrients (Est.): Energy: 110 kcal | Fats: 0 g | Carbs: 26 g | Fiber: 1 g | Protein: 1 g
+
+5. Lentil Pancake (Bara/Wo, Per pancake)
+Description: A savory, protein-rich pancake made from ground lentil batter, naturally gluten-free. A wholesome base often enjoyed plain or with toppings.
+Ingredients: Ground lentil batter (soaked), ginger, garlic, cumin powder, turmeric, salt, oil for pan frying.
+Nutrients (Est.): Energy: 150 kcal | Fats: 7 g | Carbs: 15 g | Fiber: 5 g | Protein: 8 g
+
+---
+SECTION: NEPALI CUISINES
+---
+
+1. Thakali Khaja Set (Full Serving)
+Description: Nepal's national meal (Daal Bhat). A balanced set of steamed rice, soupy lentils, vegetable curry, greens, and savory pickles, traditionally refillable.
+Ingredients: Rice (bhat), lentils (daal), vegetable curry (tarkari), seasonal greens, pickles (achar), ghee, optional meat curry.
+Nutrients (Est.): Energy: 700 kcal | Fats: 25 g | Carbs: 90 g | Fiber: 10 g | Protein: 30 g
+
+2. Newari Khaja (Full Platter)
+Description: A traditional Newari assortment platter (Samay Baji) featuring beaten rice (chiura), marinated meats, soybeans, pickles, and dried ginger. Served during feasts.
+Ingredients: Beaten rice (chiura), black soybeans, marinated meat (chhwela), potato salad (aloo achar), boiled egg, lentil pancake (wo).
+Nutrients (Est.): Energy: 650 kcal | Fats: 30 g | Carbs: 70 g | Fiber: 8 g | Protein: 25 g
+
+3. Chhwela (Small Serving)
+Description: A highly flavored Newari appetizer of boiled and roasted/pan-fried meat (buff or chicken), heavily spiced with mustard oil, ginger, garlic, and chilies.
+Ingredients: Boiled/marinated meat, mustard oil, ginger, garlic, fenugreek seeds, turmeric, chili powder, salt.
+Nutrients (Est.): Energy: 240 kcal | Fats: 15 g | Carbs: 5 g | Fiber: 2 g | Protein: 20 g
+
+---
+SECTION: FOREIGN CUISINES
+---
+*(Duplicated from Around the Globe.)*
+
+1. Chicken Burger (Est.): Energy: 450 kcal | Fats: 20 g | Carbs: 35 g | Fiber: 4 g | Protein: 37 g
+2. Cheese Pizza (Est.): Energy: 280 kcal | Fats: 10 g | Carbs: 32 g | Fiber: 2 g | Protein: 13 g
+
+---
+SECTION: OTHERS
+---
+
+1. Cold Drinks (12oz Can)
+Description: Globally leading brands of sweet, carbonated soft drinks: Coca Cola (classic cola), Fanta (orange), Sprite (lemon-lime), and Mountain Dew (citrus, high caffeine).
+Ingredients: Carbonated water, high fructose corn syrup or sugar, flavors, coloring agents, acids, caffeine (except Sprite/Fanta).
+Nutrients (Est.): Energy: 140-180 kcal | Fats: 0 g | Carbs: 35-45 g | Fiber: 0 g | Protein: 0 g
+
+=====================================================
+*Disclaimer: Nutritional information is estimated and should be verified against your final recipes.*

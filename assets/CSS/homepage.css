@@ -1,0 +1,244 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin-top: 40px;
+  overflow-x: hidden;
+
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+@supports not (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: auto;
+
+  }
+}
+
+
+.name {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: sticky;
+  top: 70.7px;
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  z-index: 1;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(205, 205, 205);
+  margin-left: 80px;
+  margin-right: 100px;
+  width: 92%;
+}
+
+.content-bar {
+  align-items: center;
+  font-size: 20px;
+  font-weight: 20px;
+  width: 100%;
+}
+
+.food-preview {
+  width: 300px;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(230, 230, 230);
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.food-preview-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  padding: 20px 80px;
+}
+
+.image {
+
+  width: 93%;
+  height: 550px;
+  object-fit: cover;
+  padding-left: 80px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.sidebar {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: sticky;
+  top: 148px;
+  height: fit-content;
+  border-right: 1px solid black;
+  padding-right: 30px;
+  margin-top: 5px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar-list {
+  margin-bottom: 20px;
+}
+
+.sidebar-list a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: rgb(55, 55, 55);
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.sidebar-list a::after {
+  content: '';
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -8px;
+  background: rgb(255, 158, 47);
+  position: absolute;
+  transition: 0.10s;
+}
+
+.sidebar-list a:hover::after {
+  width: 100%;
+}
+
+/* Main Content Area */
+.main-content {
+  width: 100%;
+}
+
+.food-item-list {
+  margin-bottom: 40px;
+}
+
+#AroundTheGlobe {
+  width: 100%;
+  max-width: 1000px;
+  height: 145px;
+  object-fit: cover;
+  object-position: center right;
+  margin-bottom: 20px;
+}
+
+.food-type-name {
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 20px;
+  margin-left: 50px;
+
+}
+
+/* Food Items Grid */
+.food-1-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.food-preview {
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.food-preview:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.food-picture {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.food-picture:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.food-description {
+  padding: 15px;
+}
+
+.food-name {
+  font-size: 20px;
+  color: rgb(100, 100, 100);
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.food-sub-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.food-price {
+  font-weight: bold;
+  font-size: 17px;
+  color: black;
+}
+
+.food-original-price {
+  text-decoration: line-through 1.3px;
+  color: rgb(160, 160, 160);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.buy-button {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: #ffea00;
+  padding: 10px 20px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.buy-button:hover {
+  background-color: #ffbb00;
+}
+
+.fas.fa-user-alt {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+}
