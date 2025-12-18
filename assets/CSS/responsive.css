@@ -6,7 +6,7 @@
   .food-preview-container {
     grid-template-columns: 1fr;
     padding: 20px 40px;
-    width: fit-content;
+    width: 100%;
   }
   .name {
     margin-left: 40px;
@@ -203,3 +203,4 @@
     height: 200px;
   }
 }
+
