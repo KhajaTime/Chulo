@@ -1,62 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Login Page</title>
-    <link rel="stylesheet" href="loginpage/login.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="login.css">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | KhajaTime</title>
 
-  </head>
+  <link rel="stylesheet" href="assets/CSS/theme.css" />
+  <link rel="stylesheet" href="assets/CSS/navbar.css" />
+  <link rel="stylesheet" href="assets/CSS/login.css" />
+  <link rel="stylesheet" href="assets/CSS/cart.css" />
 
-  <body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
 
-    
- <div class="navbar">
-    <div class="logo-container">
-      <img class="logo" src="logo.jpg">
-      <p class="logo-name">Restaurant</p>
-    </div></a>
-    <ul>
-        <li class="navbar-list" id="navhome"><a href="#">Home</a></li>
-        <li class="navbar-list" id="navtrending"><a href="#">Trending</a></li>
-        <li class="navbar-list" id="navoffers"><a href="#">Offers</a></li>
-        <li class="navbar-list" id="navabout"><a href="#">About Us</a></li>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar glass-panel">
+    <a href="index.html" class="logo-link">
+      <div class="logo-container">
+        <img class="logo" src="assets/images/logo/Logodrk.jpg" alt="KhajaTime Logo">
+        <p class="logo-name">KhajaTime</p>
+      </div>
+    </a>
+    <ul class="nav-menu">
+      <li class="navbar-list" id="navhome"><a href="index.html">Home</a></li>
+      <li class="navbar-list" id="navtrending"><a href="index.html#Trending">Trending</a></li>
+      <li class="navbar-list" id="navabout"><a href="AboutUS.html">About Us</a></li>
+      <li class="navbar-list" id="navcart">
+        <a href="#" id="cart-toggle-btn">
+          <i class='fas fa-shopping-cart'></i>
+          <span id="cart-badge" style="display: none;">0</span>
+        </a>
+      </li>
+      <li class="navbar-list" id="navprofile">
+        <a href="login.html" class="active"><i class='fas fa-user-alt'></i></a>
+      </li>
     </ul>
-  </div>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
 
+  <div class="auth-wrapper"
+    style="background: url('assets/images/food-pictures/food main.jfif') no-repeat center center/cover;">
+    <div class="hero-overlay" style="background: rgba(0,0,0,0.6); position: absolute; inset: 0;"></div>
 
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
 
-    <div class="container">
+    <div class="container glass-panel animate-up">
       <div class="login-box">
-        <h2>Login</h2>
-        <form id="loginForm">
-          <div class="user-box">
-            <input type="text" id="username" name="username" required/>
-                    <label>Username <i class='bx bxs-user'></i></label>
-                </div>
+        <div style="text-align: center; margin-bottom: 20px;">
+          <!-- Logo if needed, or just text -->
+          <!-- <img src="assets/images/logo/Logodrk.jpg" style="width: 60px; border-radius: 12px; margin-bottom: 10px;"> -->
+        </div>
+        <h2 class="animate-delay-1">Welcome Back!</h2>
+        <p class="subtitle animate-delay-1">Log in to your KhajaTime account</p>
 
-                <div class="user-box" style="margin-bottom: 0;">
-                    <input type="password" id="password" name="password" required/>
-            <label>Password <i class='bx bxs-lock-alt' ></i></label>
+        <form id="loginForm">
+          <div class="user-box animate-delay-2">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <i class='bx bxs-user field-icon'></i>
+          </div>
+
+          <div class="user-box animate-delay-2">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <i class='bx bxs-lock-alt field-icon'></i>
             <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
-          </div>  
-          <h5 style="margin-top: 0px; margin-bottom: 10px;">Don't have an account? <a href="signup.html">Sign Up</a></h5>              
-          <span id="error-message" style="color: red; display: none;">Incorrect login</span>
-          <div class="submit">
-            <button type="submit">
-              Login
-            </button>   
+          </div>
+
+          <div class="options animate-delay-3">
+            <label class="remember-me"><input type="checkbox"> Remember me</label>
+            <a href="#" class="forgot-pass">Forgot Password?</a>
+          </div>
+
+          <span id="error-message" class="error-text animate-delay-3" style="display: none;">Incorrect
+            credentials</span>
+
+          <button type="submit" class="submit-btn buy-button animate-delay-4">
+            Log In
+          </button>
+
+          <div class="auth-footer animate-delay-5">
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+          </div>
+
+          <div class="social-buttons animate-delay-5">
+            <a href="#" class="social-btn"><i class="fab fa-google"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-apple"></i></a>
           </div>
         </form>
       </div>
-      </div>   
     </div>
-    <script src="loginpage/login.js"></script>
-    <script src="login.js"></script>
-  </body>
+  </div>
+
+  <!-- Cart Sidebar -->
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2><i class="fas fa-shopping-bag"></i> Your Cart</h2>
+      <button class="clear-cart-btn" onclick="clearCart()">Clear</button>
+      <button class="close-cart-btn" id="close-cart-btn"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Cart Items will be injected here via JS -->
+      <div class="empty-cart-message">
+        <i class="fas fa-shopping-basket"></i>
+        <p>Your cart is empty</p>
+      </div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="billing-summary">
+        <div class="billing-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">Rs. 0</span>
+        </div>
+        <div class="billing-row">
+          <span>VAT (13%)</span>
+          <span id="cart-tax">Rs. 0</span>
+        </div>
+        <div class="billing-row total">
+          <span>Total</span>
+          <span id="cart-total">Rs. 0</span>
+        </div>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <script src="assets/Backend/ui-enhancer.js"></script>
+  <script src="assets/Backend/descriptions.js"></script>
+  <script src="assets/Backend/ordering.js"></script>
+  <script src="assets/Backend/cart.js"></script>
+  <script src="assets/Backend/login.js"></script>
+</body>
+
 </html>

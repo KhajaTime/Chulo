@@ -2,258 +2,279 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- style -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | KhajaTime</title>
 
-<link rel="stylesheet" href="assets\CSS\navbar.css">
-<link rel="stylesheet" href="assets\CSS\aboutus.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/CSS/theme.css">
+    <link rel="stylesheet" href="assets/CSS/navbar.css">
+    <link rel="stylesheet" href="assets/CSS/aboutus.css">
+    <link rel="stylesheet" href="assets/CSS/responsive.css">
+    <link rel="stylesheet" href="assets/CSS/cart.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="icon" type="image/x-icon" href="assets\images\logo\Logodrk.jpg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Supermercado+One&display=swap"
-  rel="stylesheet">
-<link
-  href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Supermercado+One&display=swap"
-  rel="stylesheet">
-<title>About us</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/Logodrk.jpg">
 </head>
+
 <body>
 
     <!-- Navbar -->
-  <a href="homepage.html">
-    <div class="navbar" style="font-size: larger;">
-      <div class="logo-container">
-        <img class="logo" src="assets\images\logo\Logodrk.jpg">
-        <p class="logo-name">Restaurant</p>
-      </div>
-  </a>
-  <ul>
-    <li class="navbar-list" id="navhome"><a href="homepage.html">Home</a></li>
-    <li class="navbar-list" id="navtrending"><a href="#Trending">Trending</a></li>
-    <li class="navbar-list" id="navabout"><a href="#">About Us</a></li>
-    <li class="navbar-list" id="navprofile"><a href="#"><i class='fas fa-user-alt' style="scale: 1.4;"></i></a></li>
-  </ul>
-  </div>
-   
-  <!-- Section -->
-     <div class="main-container">
-         <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>About KhajaTime</h1>
-            <p>Serving Authentic Nepali Flavors Since 2018</p>
+    <nav class="navbar glass-panel">
+        <a href="index.html" class="logo-link">
+            <div class="logo-container">
+                <img class="logo" src="assets/images/logo/Logodrk.jpg" alt="KhajaTime Logo">
+                <p class="logo-name">KhajaTime</p>
+            </div>
+        </a>
+        <ul class="nav-menu">
+            <li class="navbar-list" id="navhome"><a href="index.html">Home</a></li>
+            <li class="navbar-list" id="navtrending"><a href="index.html#Trending">Trending</a></li>
+            <li class="navbar-list" id="navabout"><a href="AboutUS.html" class="active">About Us</a></li>
+            <li class="navbar-list" id="navcart">
+                <a href="#" id="cart-toggle-btn">
+                    <i class='fas fa-shopping-cart'></i>
+                    <span id="cart-badge" style="display: none;">0</span>
+                </a>
+            </li>
+            <li class="navbar-list" id="navprofile">
+                <a href="login.html"><i class='fas fa-user-alt'></i></a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-    </section>
+    </nav>
 
-    <!-- Our Story Section -->
-    <section class="our-story">
-        <div class="story-image"><img src="assets\images\Team\ourStory.png" alt="Our Story"></div>
-        <div class="story-content">
-            <h2>Our Story</h2>
-            <p>Founded in the heart of Bhaktapur in 2018, KhajaTime began with a simple mission: to bring the authentic taste of Nepali cuisine to food lovers across the valley. What started as a small family-run eatery has grown into one of Bhaktapur's most beloved dining destinations.</p>
-            <p>Our name "KhajaTime" reflects our philosophy that every meal should be a celebration. We combine traditional Newari cooking techniques with modern culinary innovation to create dishes that honor our heritage while delighting contemporary palates.</p>
-            <p>Today, we proudly serve over 500 customers daily, offering both dine-in experiences and convenient online ordering for those who want to enjoy our food from the comfort of their homes.</p>
-        </div>
-    </section>
+    <main class="main-content" style="position: relative; overflow: hidden;">
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2" style="top: 40%; right: -10%;"></div>
+        <!--main section-->
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-bg">
+                <!-- Generic Overlay handled by CSS -->
+            </div>
+            <div class="hero-content animate-up">
+                <h1 class="animate-delay-1">About <span class="highlight">KhajaTime</span></h1>
+                <p class="animate-delay-2">Serving Authentic Flavors Since 2018</p>
+            </div>
+        </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stats-container">
-            <div class="stat-item">
-                <h3>50,000+</h3>
-                <p>Happy Customers</p>
-            </div>
-            <div class="stat-item">
-                <h3>150+</h3>
-                <p>Menu Items</p>
-            </div>
-            <div class="stat-item">
-                <h3>5 Years</h3>
-                <p>Of Excellence</p>
-            </div>
-            <div class="stat-item">
-                <h3>4.8★</h3>
-                <p>Average Rating</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="values">
-        <h2>Our Core Values</h2>
-        <div class="values-grid">
-            <div class="value-card">
-                <div class="value-icon">🌿</div>
-                <h3>Fresh Ingredients</h3>
-                <p>We source locally grown, organic ingredients daily from Bhaktapur's farmers to ensure the highest quality and support our community.</p>
-            </div>
-            <div class="value-card">
-                <div class="value-icon">👨‍🍳</div>
-                <h3>Authentic Recipes</h3>
-                <p>Our dishes are prepared using time-honored recipes passed down through generations, preserving the true essence of Nepali cuisine.</p>
-            </div>
-            <div class="value-card">
-                <div class="value-icon">💚</div>
-                <h3>Hygiene First</h3>
-                <p>We maintain the highest standards of cleanliness and food safety, ensuring every meal is prepared in a spotless environment.</p>
-            </div>
-            <div class="value-card">
-                <div class="value-icon">😊</div>
-                <h3>Customer Joy</h3>
-                <p>Your satisfaction is our priority. We go the extra mile to ensure every dining experience exceeds your expectations.</p>
-            </div>
-            <div class="value-card">
-                <div class="value-icon">🚀</div>
-                <h3>Fast Delivery</h3>
-                <p>Hot, fresh food delivered to your door within 30 minutes across Bhaktapur and surrounding areas.</p>
-            </div>
-            <div class="value-card">
-                <div class="value-icon">💰</div>
-                <h3>Fair Pricing</h3>
-                <p>Quality food shouldn't break the bank. We offer competitive prices without compromising on taste or quality.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards Section -->
-    <section class="awards">
-        <div class="awards-container">
-            <h2>Awards & Recognition</h2>
-            <div class="awards-grid">
-                <div class="award-card">
-                    <div class="trophy-icon">🏆</div>
-                    <h3>Best Restaurant in Bhaktapur</h3>
-                    <p>Nepal Food Awards 2023</p>
-                </div>
-                <div class="award-card">
-                    <div class="trophy-icon">⭐</div>
-                    <h3>Excellence in Service</h3>
-                    <p>Customer Choice Awards 2022</p>
-                </div>
-                <div class="award-card">
-                    <div class="trophy-icon">🥇</div>
-                    <h3>Top Online Food Platform</h3>
-                    <p>Digital Nepal Awards 2023</p>
-                </div>
-                <div class="award-card">
-                    <div class="trophy-icon">🌟</div>
-                    <h3>Best Momo in Town</h3>
-                    <p>Valley Food Festival 2022</p>
-                </div>
-                <div class="award-card">
-                    <div class="trophy-icon">🎖️</div>
-                    <h3>Hygiene Excellence</h3>
-                    <p>Nepal Health Ministry 2023</p>
-                </div>
-                <div class="award-card">
-                    <div class="trophy-icon">💎</div>
-                    <h3>Rising Star Restaurant</h3>
-                    <p>Nepal Restaurant Association 2021</p>
+        <!-- Our Story -->
+        <section class="container-section story-section">
+            <div class="glass-panel content-card animate-up">
+                <div class="story-grid animate-children">
+                    <div class="story-image-wrapper animate-delay-1">
+                        <img src="assets/images/Team/ourStory.png" temp-src="assets/images/Team/ourStory.png"
+                            alt="Our Story" onerror="this.src='assets/images/logo/Logodrk.jpg'">
+                    </div>
+                    <div class="story-text animate-delay-2">
+                        <h2>Our Story</h2>
+                        <p>Founded in the heart of Bhaktapur in 2018, KhajaTime began with a simple mission: to bring
+                            the authentic taste of Nepali cuisine to food lovers across the valley. What started as a
+                            small family-run eatery has grown into one of Bhaktapur's most beloved dining destinations.
+                        </p>
+                        <p>Our name "KhajaTime" reflects our philosophy that every meal should be a celebration. We
+                            combine traditional Newari cooking techniques with modern culinary innovation.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Team Section -->
-    <section class="team">
-        <h2>Meet Our Team</h2>
-        <p class="team-subtitle">The passionate people behind your favorite meals</p>
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="member-photo"><img src="assets\images\Team\RajeshShrestha.png" alt="Head Chef"></div>
-                <h3>Rajesh Shrestha</h3>
-                <p>Head Chef</p>
+        <!-- Stats -->
+        <section class="stats-section">
+            <div class="stats-grid animate-children">
+                <div class="stat-card glass-panel hover-float animate-delay-1">
+                    <h3>50k+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-card glass-panel hover-float animate-delay-2">
+                    <h3>150+</h3>
+                    <p>Menu Items</p>
+                </div>
+                <div class="stat-card glass-panel hover-float animate-delay-3">
+                    <h3>5+</h3>
+                    <p>Years of Service</p>
+                </div>
+                <div class="stat-card glass-panel hover-float animate-delay-4">
+                    <h3>4.8★</h3>
+                    <p>Average Rating</p>
+                </div>
             </div>
-            <div class="team-member">
-                <div class="member-photo"><img src="assets\images\Team\Anjali Maharjan.png" alt="Restaurant Manager"></div>
-                <h3>Anjali Maharjan</h3>
-                <p>Restaurant Manager</p>
-            </div>
-            <div class="team-member">
-                <div class="member-photo"><img src="assets\images\Team\BikashThapa.png" alt="Operations Lead"></div>
-                <h3>Bikash Thapa</h3>
-                <p>Operations Lead</p>
-            </div>
-            <div class="team-member">
-                <div class="member-photo"><img src="assets\images\Team\Sita Tamang.png" alt="Sous Chef"></div>
-                <h3>Sita Tamang</h3>
-                <p>Sous Chef</p>
-            </div>
-        </div>
+        </section>
 
-         <h2>Meet Our Developers</h2>
-         <p class="team-subtitle">The passionate people behind your wonderful experience</p>
-         <div class="team-grid" style="
-         display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-         ">
-            <div class="team-member">
-                <div class="member-photo"></div>
-                <h3>Prashil Baidhya</h3>
-                <p>Frontend Developer</p>
+        <!-- Values -->
+        <section class="container-section values-section">
+            <h2 class="section-heading animate-up">Our Core Values</h2>
+            <div class="values-grid animate-children">
+                <div class="value-card glass-panel animate-delay-1">
+                    <div class="icon-box"><i class="fas fa-leaf"></i></div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>Locally grown, organic ingredients from Bhaktapur's farmers.</p>
+                </div>
+                <div class="value-card glass-panel animate-delay-2">
+                    <div class="icon-box"><i class="fas fa-fire-alt"></i></div>
+                    <h3>Authentic Recipes</h3>
+                    <p>Time-honored recipes passed down through generations.</p>
+                </div>
+                <div class="value-card glass-panel animate-delay-3">
+                    <div class="icon-box"><i class="fas fa-hand-sparkles"></i></div>
+                    <h3>Hygiene First</h3>
+                    <p>Highest standards of cleanliness and food safety.</p>
+                </div>
+                <div class="value-card glass-panel animate-delay-4">
+                    <div class="icon-box"><i class="fas fa-smile"></i></div>
+                    <h3>Customer Joy</h3>
+                    <p>We go the extra mile to exceed your expectations.</p>
+                </div>
             </div>
-            <div class="team-member">
-                <div class="member-photo"></div>
-                <h3>Krishna Neupane</h3>
-                <p>Frontend Developer</p>
-            </div>
-            <div class="team-member">
-                <div class="member-photo"><img src="assets\images\Team\Prayush Shrestha.png" alt="Prayush Shrestha"></div>
-                <h3>Prayush Shrestha</h3>
-                <p>Backend Developer</p>
-            </div>
-            
-        </div>
-    </section>
+        </section>
 
-    <!-- Location Section -->
-    <section class="location">
-        <div class="location-container">
-            <div class="location-content">
-                <h2>Visit Us</h2>
-                <p>Experience the warmth of Nepali hospitality at our restaurant in the historic city of Bhaktapur. We're open seven days a week and ready to serve you!</p>
-                
-                <div class="location-details">
-                    <div class="location-item">
-                        <div class="location-item-icon">📍</div>
-                        <div class="location-item-text">
+        <!-- Team -->
+        <section class="container-section team-section">
+            <h2 class="section-heading animate-up">Meet Our Team</h2>
+            <div class="team-grid animate-children">
+                <!-- Static references for now, assuming images exist -->
+                <div class="team-card glass-panel animate-delay-1">
+                    <img src="assets/images/Team/RajeshShrestha.png" alt="Head Chef"
+                        onerror="this.style.display='none'">
+                    <h3>Rajesh Shrestha</h3>
+                    <p class="role">Head Chef</p>
+                </div>
+                <div class="team-card glass-panel animate-delay-2">
+                    <img src="assets/images/Team/Anjali Maharjan.png" alt="Manager" onerror="this.style.display='none'">
+                    <h3>Anjali Maharjan</h3>
+                    <p class="role">Restaurant Manager</p>
+                </div>
+                <div class="team-card glass-panel animate-delay-3">
+                    <img src="assets/images/Team/BikashThapa.png" alt="Operations" onerror="this.style.display='none'">
+                    <h3>Bikash Thapa</h3>
+                    <p class="role">Operations Lead</p>
+                </div>
+            </div>
+
+            <h3 class="sub-heading">Development Team</h3>
+            <div class="team-grid small-grid animate-children">
+                <div class="team-card glass-panel animate-delay-1">
+                    <h3>Prashil Baidhya</h3>
+                    <p class="role">Frontend Developer</p>
+                </div>
+                <div class="team-card glass-panel animate-delay-2">
+                    <h3>Krishna Neupane</h3>
+                    <p class="role">Frontend Developer</p>
+                </div>
+                <div class="team-card glass-panel animate-delay-3">
+                    <img src="assets/images/Team/Prayush Shrestha.png" alt="Backend"
+                        onerror="this.style.display='none'">
+                    <h3>Prayush Shrestha</h3>
+                    <p class="role">Backend Developer</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section class="container-section location-section">
+            <div class="glass-panel location-card animate-up">
+                <div class="text-content animate-delay-1">
+                    <h2>Visit Us</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
                             <h4>Address</h4>
                             <p>Durbar Square Road, Bhaktapur 44800, Nepal</p>
                         </div>
                     </div>
-                    <div class="location-item">
-                        <div class="location-item-icon">⏰</div>
-                        <div class="location-item-text">
-                            <h4>Opening Hours</h4>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
                             <p>Mon-Sun: 10:00 AM - 10:00 PM</p>
                         </div>
                     </div>
-                    <div class="location-item">
-                        <div class="location-item-icon">📞</div>
-                        <div class="location-item-text">
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
                             <h4>Contact</h4>
-                            <p>+977 1-6611234 | khajatime.fastfood@gmail.com</p>
+                            <p>+977 1-6611234</p>
                         </div>
                     </div>
                 </div>
+                <div class="map-placeholder animate-delay-2">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.1594936371724!2d85.42681531506148!3d27.67464698280633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a052e42363b%3A0x6c6b2b2b2b2b2b2b!2sBhaktapur%20Durbar%20Square!5e0!3m2!1sen!2snp!4v1620000000000!5m2!1sen!2snp"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
-            <div class="location-map">🗺️</div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/images/logo/Logodrk.jpg" alt="KhajaTime">
+                <p>Authentic Flavors, Delivered.</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
-    </section>
+        <div class="footer-bottom">
+            <p>&copy; 2024 KhajaTime.</p>
+        </div>
+    </footer>
 
-     </div>
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-bag"></i> Your Cart</h2>
+            <button class="clear-cart-btn" onclick="clearCart()">Clear</button>
+            <button class="close-cart-btn" id="close-cart-btn"><i class="fas fa-times"></i></button>
+        </div>
 
+        <div class="cart-items-container" id="cart-items-container">
+            <!-- Cart Items will be injected here via JS -->
+            <div class="empty-cart-message">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
 
-<!-- Footer -->
+        <div class="cart-footer">
+            <div class="billing-summary">
+                <div class="billing-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">Rs. 0</span>
+                </div>
+                <div class="billing-row">
+                    <span>VAT (13%)</span>
+                    <span id="cart-tax">Rs. 0</span>
+                </div>
+                <div class="billing-row total">
+                    <span>Total</span>
+                    <span id="cart-total">Rs. 0</span>
+                </div>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </aside>
 
+    <script src="assets/Backend/ui-enhancer.js"></script>
+    <script src="assets/Backend/descriptions.js"></script>
+    <script src="assets/Backend/ordering.js"></script>
+    <script src="assets/Backend/cart.js"></script>
+</body>
 
-  </body>
-  </html>
+</html>

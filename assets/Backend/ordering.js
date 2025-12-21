@@ -1,12 +1,22 @@
-const GetDialog = document.getElementById('dialog');
+const dialog = document.getElementById('dialog');
+const desc = document.getElementById('desc');
+
 function showDialog() {
-    dialog.showModal();
-}
-function closeDialog() {
-    dialog.close();
-}
-GetDialog.addEventListener("click", (e) => {
-    if (!desc.contains(e.target)) {
-        closeDialog();
+    if (dialog) {
+        dialog.showModal();
     }
-});
+}
+
+function closeDialog() {
+    if (dialog) {
+        dialog.close();
+    }
+}
+
+if (dialog && desc) {
+    dialog.addEventListener("click", (e) => {
+        if (!desc.contains(e.target)) {
+            closeDialog();
+        }
+    });
+}

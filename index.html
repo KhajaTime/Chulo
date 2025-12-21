@@ -4,333 +4,471 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- style -->
-<link rel="stylesheet" href="assets/CSS/homepage.css">
-<link rel="stylesheet" href="assets\CSS\responsive.css">
-<link rel="stylesheet" href="assets\CSS\navbar.css">
-<!-- descriptions -->
-<link rel="stylesheet" href="assets\CSS\food-description.css">
+  <meta name="description"
+    content="KhajaTime - Experience the best food in town. Order online for delivery or pickup. Authenticity in every bite.">
+  <title>KhajaTime | Premium Food Delivery</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="icon" type="image/x-icon" href="assets\images\logo\Logodrk.jpg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Supermercado+One&display=swap"
-  rel="stylesheet">
-<link
-  href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Supermercado+One&display=swap"
-  rel="stylesheet">
-<title>Homepage</title>
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/CSS/theme.css">
+  <link rel="stylesheet" href="assets/CSS/homepage.css">
+  <link rel="stylesheet" href="assets/CSS/navbar.css">
+  <link rel="stylesheet" href="assets/CSS/responsive.css">
+  <link rel="stylesheet" href="assets/CSS/notifications.css">
+  <link rel="stylesheet" href="assets/CSS/food-description.css">
+  <link rel="stylesheet" href="assets/CSS/cart.css">
 
-<script>
-  // Smooth Scrolling JS
-  console.log('Smooth scroll initializing...');
-
-  function smoothScrollWithOffset(target) {
-    const element = document.querySelector(target);
-    if (!element) {
-      console.log('Element not found:', target);
-      return;
-    }
-    const navbar = document.querySelector('.navbar');
-    const categoriesBar = document.querySelector('.name');
-    const navbarHeight = navbar ? navbar.offsetHeight : 0;
-    const categoriesHeight = categoriesBar ? categoriesBar.offsetHeight : 0;
-    const totalOffset = navbarHeight + categoriesHeight + 30;
-    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-    const targetPosition = elementPosition - totalOffset;
-    console.log('Scrolling to position:', targetPosition);
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const sidebarLinks = document.querySelectorAll('.sidebar-list a[href^="#"]');
-    console.log('Found sidebar links:', sidebarLinks.length);
-
-    sidebarLinks.forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        const target = this.getAttribute('href');
-        console.log('Clicked:', target);
-
-        smoothScrollWithOffset(target);
-      });
-    });
-  });
-</script>
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo/Logodrk.jpg">
 </head>
 
 <body>
-  <a href="website.html">
-    <div class="navbar" style="font-size: larger;">
+
+  <!-- Navbar -->
+  <nav class="navbar glass-panel">
+    <a href="index.html" class="logo-link">
       <div class="logo-container">
-        <img class="logo" src="assets\images\logo\Logodrk.jpg">
-        <p class="logo-name">Restaurant</p>
+        <img class="logo" src="assets/images/logo/Logodrk.jpg" alt="KhajaTime Logo">
+        <p class="logo-name">KhajaTime</p>
       </div>
-  </a>
-  <ul>
-    <li class="navbar-list" id="navhome"><a href="#">Home</a></li>
-    <li class="navbar-list" id="navtrending"><a href="#Trending">Trending</a></li>
-    <li class="navbar-list" id="navabout"><a href="AboutUS.html">About Us</a></li>
-    <li class="navbar-list" id="navprofile"><a href="#"><i class='fas fa-user-alt' style="scale: 1.4;"></i></a></li>
-  </ul>
+    </a>
+    <ul class="nav-menu">
+      <li class="navbar-list" id="navhome"><a href="#" class="active">Home</a></li>
+      <li class="navbar-list" id="navtrending"><a href="#Trending">Trending</a></li>
+      <li class="navbar-list" id="navabout"><a href="AboutUS.html">About Us</a></li>
+      <li class="navbar-list search-nav-item">
+        <div class="nav-search-container">
+          <input type="text" id="navSearchInput" placeholder="Search...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </li>
+      <li class="navbar-list" id="navcart">
+        <a href="#" id="cart-toggle-btn">
+          <i class='fas fa-shopping-cart'></i>
+          <span id="cart-badge" style="display: none;">0</span>
+        </a>
+      </li>
+      <li class="navbar-list" id="navprofile">
+        <a href="login.html"><i class='fas fa-user-alt'></i></a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-bg">
+      <img src="assets/images/food-pictures/food main.jfif" alt="Delicious Food Background">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h1>Taste the Authentic <br> <span class="highlight">Flavors of Nepal</span></h1>
+      <p>Experience culinary excellence delivered right to your doorstep. Fresh, hot, and delicious.</p>
+      <a href="#Trending" class="cta-button">Order Now</a>
+    </div>
+  </header>
+
+  <!-- Categories / Filters Bar -->
+  <div class="name filter-bar">
+    <div class="filter-chips">
+      <button class="filter-chip active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="veg">Veg</button>
+      <button class="filter-chip" data-filter="non-veg">Non-Veg</button>
+      <button class="filter-chip" data-filter="sweet">Sweet</button>
+      <button class="filter-chip" data-filter="spicy">Spicy</button>
+    </div>
   </div>
 
-  <div class="topimage">
-    <img class="image" src="assets\images\food-pictures\food main.jfif">
-  </div>
-  <div class="name">
-    <p class="content-bar"> CATEGORIES</p>
-  </div>
+  <main class="main-container">
 
-  <div class="food-preview-container">
-
-    <div class="sidebar">
-      <ul>
-        <li class="sidebar-list"> <a href="#Around-The-Globe">Around The Globe</a></li>
-        <li class="sidebar-list"> <a href="#Trending">Trending</a></li>
-        <li class="sidebar-list"> <a href="#Dessert">Dessert</a></li>
-        <li class="sidebar-list"> <a href="#Healthy">Healthy Option</a></li>
-        <li class="sidebar-list"> <a href="#Desi">Desi food</a></li>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <ul class="glass-panel" style="padding: 1rem; border-radius: 12px;">
+        <li class="sidebar-list"> <a href="#Around-The-Globe"><i class="fas fa-globe"></i> Global Flavors</a></li>
+        <li class="sidebar-list"> <a href="#Trending"><i class="fas fa-fire"></i> Trending</a></li>
+        <li class="sidebar-list"> <a href="#Dessert"><i class="fas fa-ice-cream"></i> Desserts</a></li>
+        <li class="sidebar-list"> <a href="#Healthy"><i class="fas fa-leaf"></i> Healthy Options</a></li>
+        <li class="sidebar-list"> <a href="#Desi"><i class="fas fa-utensils"></i> Desi Delights</a></li>
       </ul>
+    </aside>
 
-    </div>
-
-    <div class="food-item-list" id="Around-The-Globe">
-      <img id="AroundTheGlobe" src="assets\images\food-pictures\food-first.png"> <br>
-      <div class="food-type-name-1">
-        AROUND THE GLOBE
-      </div>
-    </div>
+    <!-- Food Content -->
+    <section class="food-content">
 
 
-    <div class="food-1-preview">
+      <!-- Global Flavors Section -->
+      <h2 class="section-title" id="Around-The-Globe">Global Flavors</h2>
 
-
-      <div class="food-preview">
-        <a onclick="showDialog()">
-          <div>
-            <img class="food-picture" src="assets\images\food-pictures/food 1.jfif">
+      <!-- Food Items Grid (Example for Globe) -->
+      <div class="food-grid-container">
+        <!-- Manually added example item, others will be populated potentially by JS or static -->
+        <article class="food-preview hover-float" data-id="1" data-type="non-veg" data-tags="best seller"
+          onclick="showDialog(1)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/food 1.jfif" alt="Chicken Burger">
+            <span class="badge">Best Seller</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 1)"><i class="far fa-heart"></i></button>
           </div>
           <div class="food-description">
-            <p class="food-name">Chicken Burger</p>
-            <div class="food-sub-description">
-              <p class="food-price">&#x20B9 160</p>
-              <p class="food-original-price">&#x20B9 190</p>
-              <div class="food-stock">
-                <button class="buy-button">Buy</button>
+            <h3 class="food-name">Chicken Burger</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 140</span>
+              <span class="food-original-price">Rs. 190</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(1)">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Trending Section -->
+      <h2 class="section-title" id="Trending">Trending Now</h2>
+      <div class="food-grid-container">
+
+        <article class="food-preview hover-float" data-id="3" data-type="non-veg" data-tags="momo trending"
+          onclick="showFoodDetails(3)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/buffMomo.webp" alt="Buff Momo">
+            <span class="badge">#1 Trending</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 3)"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="food-description">
+            <h3 class="food-name">Buff Momo</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 120</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(3)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-preview hover-float" data-id="2" data-type="non-veg" data-tags="momo trending"
+          onclick="showFoodDetails(2)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/chickenMomo.jpg" alt="Chicken Momo">
+            <span class="badge">#2 Trending</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 2)"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="food-description">
+            <h3 class="food-name">Chicken Momo</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 120</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(2)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-preview hover-float" data-id="1" data-type="non-veg" data-tags="burger trending"
+          onclick="showFoodDetails(1)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/food 1.jfif" alt="Chicken Burger">
+            <span class="badge">#3 Trending</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 1)"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="food-description">
+            <h3 class="food-name">Chicken Burger</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 140</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(1)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-preview hover-float" data-id="4" data-type="veg" data-tags="pizza trending"
+          onclick="showFoodDetails(4)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/cheesepizza.jpg" alt="Cheese Pizza">
+            <span class="badge">#4 Trending</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 4)"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="food-description">
+            <h3 class="food-name">Cheese Pizza</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 320</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(4)">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Other Sections -->
+      <h2 class="section-title" id="Dessert">Sweet Cravings</h2>
+      <div class="food-grid-container">
+        <article class="food-preview hover-float" data-id="5" data-type="veg" data-tags="sweet cake"
+          onclick="showFoodDetails(5)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/food 8.jpeg" alt="Banana Walnut Cake">
+            <span class="badge">Sweet</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 5)"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="food-description">
+            <h3 class="food-name">Banana Walnut Cake</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 180</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(5)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-preview hover-float" data-id="6" data-type="veg" data-tags="sweet cake premium"
+          onclick="showFoodDetails(6)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/food 9.jpg" alt="Rich Chocolate Cake">
+            <span class="badge">Premium</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 6)"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="food-description">
+            <h3 class="food-name">Rich Chocolate Cake</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 320</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(6)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-preview hover-float" data-id="7" data-type="veg" data-tags="sweet hot brownie"
+          onclick="showFoodDetails(7)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/food 10.jpg" alt="Sizzling Brownie">
+            <span class="badge">Hot</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 7)"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="food-description">
+            <h3 class="food-name">Sizzling Brownie</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 250</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(7)">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+
+      <h2 class="section-title" id="Healthy">Healthy Options</h2>
+      <div class="food-grid-container">
+        <!-- Replaced mislabeled cakes with Sandwich and Salad placeholders if available, using generic for now -->
+        <article class="food-preview hover-float" data-id="8" data-type="veg" data-tags="sandwich healthy"
+          onclick="showFoodDetails(8)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/food 11.JPG" alt="Veg Club Sandwich">
+            <span class="badge">Veg</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 8)"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="food-description">
+            <h3 class="food-name">Veg Club Sandwich</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 280</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(8)">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+
+      <h2 class="section-title" id="Desi">Desi Favorites</h2>
+      <div class="food-grid-container">
+        <article class="food-preview hover-float" data-id="9" data-type="veg" data-tags="traditional desi"
+          onclick="showFoodDetails(9)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/food 12.jpeg" alt="Dal Bhat Set">
+            <span class="badge">Traditional</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 9)"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="food-description">
+            <h3 class="food-name">Dal Bhat Set</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 350</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(9)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-preview hover-float" data-id="10" data-type="non-veg" data-tags="popular desi"
+          onclick="showFoodDetails(10)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/food 13.jpeg" alt="Nepali Thali">
+            <span class="badge">Popular</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 10)"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="food-description">
+            <h3 class="food-name">Nepali Thali</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 450</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(10)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-preview hover-float" data-id="11" data-type="veg" data-tags="spicy desi"
+          onclick="showFoodDetails(11)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/food 4.JPG" alt="Samosa Chaat">
+            <span class="badge">Spicy</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 11)"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="food-description">
+            <h3 class="food-name">Samosa Chaat</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 120</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(11)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-preview hover-float" data-id="12" data-type="veg" data-tags="desi bestseller"
+          onclick="showFoodDetails(12)">
+          <div class="card-image">
+            <img class="food-picture" src="assets/images/food-pictures/food 5.JPG" alt="Chole Bhature">
+            <span class="badge">Bestseller</span>
+            <button class="favorite-btn" onclick="toggleFavorite(event, 12)"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="food-description">
+            <h3 class="food-name">Chole Bhature</h3>
+            <div class="food-details">
+              <span class="food-price">Rs. 180</span>
+            </div>
+            <button class="buy-button" onclick="event.stopPropagation(); addToCart(12)">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="assets/images/logo/Logodrk.jpg" alt="KhajaTime">
+        <p>Your favorite food delivery partner.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#Trending">Trending</a>
+        <a href="AboutUS.html">About Us</a>
+      </div>
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 KhajaTime. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Product Details Dialog -->
+  <dialog id="dialog" class="glass-panel">
+    <div class="food-description-container" id="desc">
+      <div class="food-picture-container">
+        <img class="food-description-picture" src="" alt="Food Image">
+      </div>
+      <div class="food-description-details">
+        <button class="close-btn" onclick="document.getElementById('dialog').close()"><i
+            class="fas fa-times"></i></button>
+
+        <div class="modal-header">
+          <h2 class="food-name-modal"></h2>
+          <div class="tags-section">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div class="food-price-modal">
+          <span class="modal-price"></span>
+          <span class="modal-original-price"></span>
+        </div>
+
+        <div class="modal-body">
+          <div class="description-section">
+            <h3>Description</h3>
+            <p class="description-content"></p>
+          </div>
+
+          <div class="ingredients-section">
+            <h3>Ingredients</h3>
+            <p class="ingredients-content"></p>
+          </div>
+
+          <div class="nutrients-section">
+            <h3>Nutritional Info</h3>
+            <div class="nutrients-grid">
+              <div class="nutrient-item">
+                <span class="nutrient-val energy">0</span>
+                <span class="nutrient-label">Kcal</span>
+              </div>
+              <div class="nutrient-item">
+                <span class="nutrient-val protein">0</span>
+                <span class="nutrient-label">Protein</span>
+              </div>
+              <div class="nutrient-item">
+                <span class="nutrient-val fats">0</span>
+                <span class="nutrient-label">Fats</span>
+              </div>
+              <div class="nutrient-item">
+                <span class="nutrient-val carbs">0</span>
+                <span class="nutrient-label">Carbs</span>
               </div>
             </div>
           </div>
-      </div>
-      </a>
-
-
-
-    </div>
-    <!-- Trending -->
-
-    <div class="food-type-name" id="Trending">
-      Trending
-    </div>
-
-    <div class="food-1-preview">
-      <div class="food-preview">
-        <a href="food-1-description.html">
-          <div>
-            <img class="food-picture" src="assets\images\food-pictures\buffMomo.webp">
-          </div>
-        </a>
-        <div class="food-description">
-          <p class="food-name">Buff Momo</p>
-
-          <div class="food-sub-description">
-
-            <p class="food-price">&#x20B9 110</p>
-            <p class="food-original-price">#1</p>
-            <div class="food-stock">
-              <button class="buy-button">Buy</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="food-preview">
-        <a href="food-1-description.html">
-          <div>
-            <img class="food-picture" src="assets/images/food-pictures/chickenMomo.jpg">
-          </div>
-        </a>
-        <div class="food-description">
-          <p class="food-name">Chicken Momo</p>
-          <div class="food-sub-description">
-            <p class="food-price">&#x20B9 120</p>
-            <p class="food-original-price">#2</p>
-            <div class="food-stock">
-              <button class="buy-button">Buy</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="food-preview">
-        <a href="food-1-description.html">
-          <div>
-            <img class="food-picture" src="assets\images\food-pictures/food 1.jfif">
-          </div>
-        </a>
-        <div class="food-description">
-          <p class="food-name">Chicken Burger</p>
-          <div class="food-sub-description">
-            <p class="food-price">&#x20B9 160</p>
-            <p class="food-original-price">#3</p>
-            <div class="food-stock">
-              <button class="buy-button">Buy</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="food-preview">
-        <a href="food-1-description.html">
-          <div>
-            <img class="food-picture" src="assets\images\food-pictures\cheesepizza.jpg">
-          </div>
-        </a>
-        <div class="food-description">
-          <p class="food-name">Cheese Pizza</p>
-
-          <div class="food-sub-description">
-
-            <p class="food-price">&#x20B9 320</p>
-            <p class="food-original-price">#4</p>
-            <div class="food-stock">
-              <button class="buy-button">Buy</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-
-    <div class="food-type-name" id="Dessert">
-      DESSERT
-    </div>
-
-    <div class="food-1-preview">
-
-
-    </div>
-
-    <div class="food-type-name" id="Healthy">
-      Healthy Option
-    </div>
-    <div class="food-1-preview">
-    </div>
-
-
-    <div class="food-type-name" id="Desi">
-      Desi Foods
-    </div>
-
-    <div class="food-1-preview">
-
-
-    </div>
-
-
-  </div>
-
-
-  <dialog id="dialog" style="max-width: 140vh; min-height: 70vh; margin: auto; border-radius: 24px; border: none;">
-
-    <div class="food-description-container" id="desc">
-
-      <div class="food-picture-container" style="max-width: 600px;">
-        <img class="food-description-picture" src="assets/images/food-pictures/food 1.jfif ">
-      </div>
-
-      <div class="food-description" style="margin-left: 20px;">
-        <div class="food-name">
-          Chicken Burger
         </div>
 
-        <div class="food-price">
-          <div class="original-price">&#x20B9 190</div>
-          <div class="discounted-price">&#x20B9 140</div>
-        </div>
-
-        <button class="buy-button">Buy</button>
-
-        <div class="description">
-          <div class="description-heading">
-            DETAILS ABOUT THIS MEAL
-          </div>
-
-          <div class="description-content">
-            A chicken burger is a popular type of sandwich that consists of a boneless, skinless chicken patty served on
-            a bun. It is a delicious
-            and versatile alternative to beef burgers and has gained significant popularity worldwide.
-          </div>
-
-          <div class="veg-non-veg">
-
-            <img class="food-sticker" src="assets/images/food-pictures/icn-non-veg.svg">
-
-            <div class="veg-non">Non-veg</div>
-          </div>
-
-          <div class="ingredients-heading">INGREDIENTS</div>
-          <div class="ingredients-content">
-            Fresh chicken breast patty, lettuce, tomatoes,
-            pickles, melted cheese, soft toasted bun, mayonnaise, ketchup, signature sauce.
-          </div>
-        </div>
-        <div class="nutrients-heading">NUTRIENTS</div>
-
-        <div class="nutrients-content">
-          <div class="nutrients-value">
-            <div class="nutrients-number">450</div>
-            <div> Energy (kcl)</div>
-          </div>
-
-          <div class="nutrients-value">
-            <div class="nutrients-number">20</div>
-            <div> Fats (g) </div>
-          </div>
-
-          <div class="nutrients-value">
-            <div class="nutrients-number">35</div>
-            <div> Carbs (g) </div>
-          </div>
-
-          <div class="nutrients-value">
-            <div class="nutrients-number"> 4 </div>
-            <div> Fiber (g)
-            </div>
-          </div>
-
-          <div class="nutrients-value">
-            <div class="nutrients-number"> 37 </div>
-            <div> Protein (g) </div>
-          </div>
-
-        </div>
+        <button class="buy-button modal-btn">Add to Cart</button>
       </div>
     </div>
-
   </dialog>
 
-  <script src="assets\Backend\ordering.js"></script>
+  <!-- Cart Sidebar -->
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2><i class="fas fa-shopping-bag"></i> Your Cart</h2>
+      <button class="clear-cart-btn" onclick="clearCart()">Clear</button>
+      <button class="close-cart-btn" id="close-cart-btn"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Cart Items will be injected here via JS -->
+      <div class="empty-cart-message">
+        <i class="fas fa-shopping-basket"></i>
+        <p>Your cart is empty</p>
+      </div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="billing-summary">
+        <div class="billing-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">Rs. 0</span>
+        </div>
+        <div class="billing-row">
+          <span>VAT (13%)</span>
+          <span id="cart-tax">Rs. 0</span>
+        </div>
+        <div class="billing-row total">
+          <span>Total</span>
+          <span id="cart-total">Rs. 0</span>
+        </div>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="assets/Backend/ui-enhancer.js"></script>
+  <script src="assets/Backend/descriptions.js"></script>
+  <script src="assets/Backend/ordering.js"></script>
+  <script src="assets/Backend/cart.js"></script>
+  <script src="assets/Backend/search.js"></script>
 </body>
 
 </html>
