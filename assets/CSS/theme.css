@@ -1,0 +1,288 @@
+/* ===== THEME VARIABLES ===== */
+:root {
+    /* Light Theme Colors */
+    --primary: #C75B2C;
+    --primary-hover: #E07040;
+    --primary-light: rgba(199, 91, 44, 0.1);
+
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
+    --bg-glass: rgba(255, 255, 255, 0.85);
+
+    --text-primary: #1a202c;
+    --text-secondary: #718096;
+    --text-accent: #FF6B35;
+
+    --border-color: #e2e8f0;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+
+    --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 100%);
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --input-bg: rgba(255, 255, 255, 0.2);
+    --input-border: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== DARK THEME ===== */
+body.dark-theme {
+    --primary: #FF6B35;
+    --primary-hover: #FF8555;
+    --primary-light: rgba(255, 107, 53, 0.15);
+
+    --bg-primary: #171923;
+    --bg-secondary: #2D3748;
+    --bg-glass: rgba(26, 32, 44, 0.85);
+
+    --text-primary: #F7FAFC;
+    --text-secondary: #A0AEC0;
+    --text-accent: #FF6B35;
+
+    --border-color: #4A5568;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.6);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6);
+
+    --gradient-glass: linear-gradient(135deg, rgba(45, 55, 72, 0.6) 0%, rgba(45, 55, 72, 0.2) 100%);
+
+    --glass-bg: rgba(20, 20, 20, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    --input-bg: rgba(0, 0, 0, 0.25);
+    --input-border: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== BASE STYLES ===== */
+body {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== TEXT COLORS ===== */
+body, p, span, div, li, a,
+h1, h2, h3, h4, h5, h6,
+.food-name, .food-type-name,
+.logo-name, .content-bar {
+    color: var(--text-primary) !important;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary) !important;
+}
+
+.secondary-text, small, .subtitle, .description {
+    color: var(--text-secondary) !important;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(60px) !important;
+    -webkit-backdrop-filter: blur(60px) !important;
+    border-bottom-color: var(--border-color) !important;
+}
+
+.navbar-list a {
+    color: var(--text-primary) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-list a:hover,
+.navbar-list a.active {
+    color: var(--primary) !important;
+}
+
+.navbar-list::after {
+    background: var(--primary) !important;
+}
+
+/* ===== NAME BAR ===== */
+.name {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(60px) !important;
+    -webkit-backdrop-filter: blur(60px) !important;
+    border-bottom-color: var(--border-color) !important;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    border-right-color: var(--border-color) !important;
+}
+
+.sidebar-list a {
+    color: var(--text-primary) !important;
+}
+
+.sidebar-list a::after {
+    background: var(--primary) !important;
+}
+
+/* ===== FOOD CARDS ===== */
+.food-preview {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    transition: all 0.3s ease;
+}
+
+.food-preview:hover {
+    border-color: var(--primary) !important;
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl) !important;
+}
+
+.food-description {
+    background: var(--bg-secondary) !important;
+}
+
+/* ===== BUTTONS ===== */
+.buy-button {
+    background: var(--gradient-primary) !important;
+    box-shadow: 0 4px 6px rgba(255, 107, 53, 0.25) !important;
+}
+
+.buy-button:hover {
+    box-shadow: 0 6px 10px rgba(255, 107, 53, 0.35) !important;
+}
+
+/* ===== INPUTS ===== */
+input, .nav-search-container {
+    color: var(--text-primary) !important;
+}
+
+input:focus, .nav-search-container:focus-within {
+    outline: none;
+}
+
+.nav-search-container input {
+    color: var(--text-primary) !important;
+}
+
+.nav-search-container button {
+    color: var(--text-secondary) !important;
+}
+
+.nav-search-container button:hover {
+    color: var(--primary) !important;
+}
+
+/* ===== ICONS ===== */
+.fas.fa-user-alt {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease;
+}
+
+.fas.fa-user-alt:hover {
+    background: var(--primary-light) !important;
+    color: var(--primary) !important;
+}
+
+/* ===== CART ===== */
+#cart-badge {
+    background: var(--primary) !important;
+    color: white !important;
+}
+
+#navcart a {
+    color: var(--text-primary) !important;
+}
+
+#navcart a:hover {
+    background: var(--primary-light) !important;
+    color: var(--primary) !important;
+}
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    background: transparent;
+    color: var(--text-secondary) !important;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle a:hover {
+    background: var(--primary-light) !important;
+    color: var(--primary) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+/* ===== GLASSMORPHISM ===== */
+.glass-panel {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: var(--glass-shadow) !important;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+}
+
+.hover-float:hover {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ===== DIALOG ===== */
+dialog {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border-top: 1px solid var(--border-color) !important;
+}
+
+.footer-links a {
+    color: var(--text-secondary) !important;
+}
+
+.footer-links a:hover {
+    color: var(--primary) !important;
+}
+
+/* ===== PRICE STYLING ===== */
+.food-price {
+    color: var(--text-primary) !important;
+}
+
+.food-original-price {
+    color: var(--text-secondary) !important;
+}
+
+/* ===== ENSURE TRANSITIONS ===== */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

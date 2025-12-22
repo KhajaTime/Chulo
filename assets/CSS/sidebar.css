@@ -18,6 +18,7 @@
    padding-top: 20px;
    text-decoration: none;
    color: rgb(55, 55, 55);
+     transition: ease 90 s;
 }
 
 .sidebar-list a::after {
@@ -29,7 +30,8 @@
   bottom: -8px;
   background: rgb(255, 158, 47);
   position: absolute;
-  transform: 0.10s;
+  transform: 0.9s;
+
 }
 
 .sidebar-list a:hover::after {

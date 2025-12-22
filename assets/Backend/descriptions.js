@@ -4,7 +4,7 @@ const foodItems = [
   {
     id: 1,
     name: "Chicken Burger",
-    image: "chickenBurger.jfif",
+    image: "chickenBurger.jpg",
     price: 140,
     originalPrice: 190,
     type: "Non-veg",
