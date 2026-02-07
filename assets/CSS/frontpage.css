@@ -1144,7 +1144,7 @@ body {
     }
 
     .reviews-section {
-        margin-top: 40px;
+        display: none;
     }
 
     .login-page-container {
@@ -1256,6 +1256,9 @@ body {
 
     .about-section p {
         font-size: 15px;
+    }
+    .reviews-section{
+        display: none;
     }
 
     .review-card {
