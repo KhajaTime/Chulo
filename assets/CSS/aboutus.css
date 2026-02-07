@@ -768,9 +768,9 @@ body.dark-mode {
     position: absolute;
     top: 25px;
     right: 25px;
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: var(--bg-secondary);
+    color: var(--primary);
+    border: 2px solid var(--border-color);
     backdrop-filter: blur(10px);
     width: 45px;
     height: 45px;
@@ -791,6 +791,8 @@ body.dark-mode {
     border-color: white;
 }
 
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .dialog-header {
@@ -810,5 +812,36 @@ body.dark-mode {
     
     .dialog-body {
         padding: 30px;
+    }
+}
+
+
+.team-grid-devs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Large Mobile and Below (767px and below) - 1 column */
+@media (max-width: 767px) {
+    .team-grid-devs {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+/* Mobile Portrait (639px and below) */
+@media (max-width: 639px) {
+    .team-grid-devs {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+/* Small Mobile (479px and below) */
+@media (max-width: 479px) {
+    .team-grid-devs {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }
