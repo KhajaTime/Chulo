@@ -31,8 +31,8 @@ body {
 }
 
 .container {
-    width: calc(100% - 10vh);
-    height:calc(100% - 10vh);
+    width: 100%;
+    max-width: 1400px;
     padding: 0 20px;
     display: flex;
     align-items: center;
@@ -483,8 +483,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 400px;
     gap: 40px;
-
-    margin-left: 100px;
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 40px;
 }
 
@@ -1022,16 +1022,11 @@ body {
     }
 }
 
-/* ============================================
-   RESPONSIVE DESIGN - MEDIA QUERIES
-   ============================================ */
 
-/* Large Desktop (1400px and above) - Default styles */
 
 /* Medium Desktop and Large Tablets (1024px - 1399px) */
 @media (max-width: 1399px) {
     .container {
-        margin-left: 50px;
         padding: 40px 20px;
     }
 
@@ -1069,12 +1064,20 @@ body {
     .fries-bag-image {
         width: 400px;
     }
+
+    .about-container {
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+    #navabout{
+        display: none;
+    }
 }
 
 /* Tablets and Small Desktops (768px - 1023px) */
 @media (max-width: 1023px) {
     body {
-        margin-top: 8vh;
+        margin-top: 0;
     }
 
     .home-page {
@@ -1082,24 +1085,18 @@ body {
     }
     
     .container {
-
-        grid-template-columns: 1fr;
-        margin-right: 0;
-        padding: 20px;
-        gap: 20px;
-        justify-items: center;
-    }
-    
-    .home-page .container {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        width: 100%;
+        padding: 20px;
     }
     
     .info-section {
         max-width: 100%;
         margin-bottom: 40px;
     }
+    
     .tags{
         justify-content: center;
     }
@@ -1128,53 +1125,10 @@ body {
         display: none;
     }
 
-    .burger-wrapper {
-        width: 380px;
-        right: 20px;
-        top: 220px;
-    }
-
-    .burger-image {
-        width: 350px;
-    }
-
-    .burger-price-badge {
-        width: 70px;
-        height: 70px;
-        top: 18%;
-        right: 58%;
-    }
-
-    .currency {
-        font-size: 22px;
-    }
-
-    .amount {
-        font-size: 24px;
-    }
-
-    .fries-price-badge {
-        width: 70px;
-        height: 70px;
-    }
-
-    .meat-chunks-image,
-    .fries-image {
-        width: 380px;
-    }
-
-    .fries-wrapper {
-        width: 350px;
-        right: -60px;
-    }
-
-    .fries-bag-image {
-        width: 350px;
-    }
-
-    .feature-card {
-        font-size: 13px;
-        padding: 12px 18px;
+    .about-container {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        padding: 20px;
     }
 
     .about-section {
@@ -1205,7 +1159,7 @@ body {
 /* Mobile Landscape and Small Tablets (640px - 767px) */
 @media (max-width: 767px) {
     body {
-        margin-top: 10vh;
+        margin-top: 8vh;
     }
 
     .home-page {
@@ -1215,6 +1169,8 @@ body {
 
     .container {
         padding: 15px;
+        flex-direction: column;
+        align-items: center;
     }
 
     h1 {
@@ -1269,87 +1225,7 @@ body {
     }
 
     .burger-section {
-        width: 100%;
-        max-width: 400px;
-        height: 380px;
-    }
-
-    .burger-wrapper {
-        width: 300px;
-        right: 50%;
-        transform: translate(50%, -50%);
-        top: 200px;
-    }
-
-    .burger-image {
-        width: 280px;
-    }
-
-    .burger-price-badge {
-        width: 60px;
-        height: 60px;
-        top: 10%;
-        right: 15%;
-    }
-
-    .currency {
-        font-size: 18px;
-    }
-
-    .amount {
-        font-size: 20px;
-    }
-
-    .fries-price-badge {
-        width: 60px;
-        height: 60px;
-        top: 30%;
-        right: 5%;
-    }
-
-    .meat-chunks-image {
-        width: 280px;
-        right: 50%;
-        transform: translate(50%, -50%);
-        top: 150px;
-    }
-
-    .fries-image {
-        width: 280px;
-        right: 50%;
-        transform: translate(50%, -50%);
-        top: 180px;
-    }
-
-    .fries-wrapper {
-        width: 280px;
-        right: 50%;
-        transform: translate(50%, -50%);
-        top: 250px;
-    }
-
-    .fries-bag-image {
-        width: 280px;
-    }
-
-    .feature-card {
-        font-size: 11px;
-        padding: 10px 15px;
-    }
-
-    .card-1 {
-        top: 5%;
-        left: 5%;
-    }
-
-    .card-2 {
-        top: 15%;
-        right: 5%;
-    }
-
-    .card-3 {
-        bottom: 15%;
-        left: 5%;
+        display: none;
     }
 
     .share-buttons {
@@ -1363,6 +1239,10 @@ body {
     .share-button {
         width: 100%;
         justify-content: center;
+    }
+
+    .about-container {
+        padding: 20px 15px;
     }
 
     .about-section h1 {
@@ -1414,6 +1294,9 @@ body {
         font-size: 28px;
         margin-bottom: 30px;
     }
+    #navtrending{
+        display: none;
+    }
 }
 
 /* Mobile Portrait (480px - 639px) */
@@ -1439,31 +1322,8 @@ body {
         width: 100%;
     }
 
-    .burger-section {
-        height: 350px;
-        max-width: 350px;
-    }
-
-    .burger-wrapper {
-        width: 260px;
-        top: 180px;
-    }
-
-    .burger-image {
-        width: 240px;
-    }
-
-    .meat-chunks-image,
-    .fries-image {
-        width: 240px;
-    }
-
-    .fries-wrapper {
-        width: 240px;
-    }
-
-    .fries-bag-image {
-        width: 240px;
+    .about-container {
+        padding: 20px 10px;
     }
 
     .about-section h1 {
@@ -1486,7 +1346,7 @@ body {
 /* Small Mobile (320px - 479px) */
 @media (max-width: 479px) {
     body {
-        margin-top: 12vh;
+        margin-top: 8vh;
     }
 
     .home-page {
@@ -1519,56 +1379,6 @@ body {
 
     .stat-label {
         font-size: 13px;
-    }
-
-    .burger-section {
-        height: 300px;
-        max-width: 300px;
-    }
-
-    .burger-wrapper {
-        width: 220px;
-        top: 160px;
-    }
-
-    .burger-image {
-        width: 200px;
-    }
-
-    .burger-price-badge,
-    .fries-price-badge {
-        width: 50px;
-        height: 50px;
-    }
-
-    .currency {
-        font-size: 16px;
-    }
-
-    .amount {
-        font-size: 18px;
-    }
-
-    .meat-chunks-image,
-    .fries-image {
-        width: 200px;
-    }
-
-    .fries-wrapper {
-        width: 200px;
-    }
-
-    .fries-bag-image {
-        width: 200px;
-    }
-
-    .feature-card {
-        font-size: 10px;
-        padding: 8px 12px;
-    }
-
-    .feature-card .emoji {
-        font-size: 16px;
     }
 
     .share-prim-text {
@@ -1669,36 +1479,15 @@ body {
         padding: 12px;
         font-size: 15px;
     }
+    #navhome{
+        display: none;    
+    }
 }
 
 /* Extra Small Devices (below 320px) */
 @media (max-width: 319px) {
     h1 {
         font-size: 24px;
-    }
-
-    .burger-section {
-        height: 250px;
-        max-width: 250px;
-    }
-
-    .burger-wrapper {
-        width: 180px;
-        top: 140px;
-    }
-
-    .burger-image {
-        width: 160px;
-    }
-
-    .meat-chunks-image,
-    .fries-image,
-    .fries-wrapper {
-        width: 160px;
-    }
-
-    .fries-bag-image {
-        width: 160px;
     }
 
     .about-section h1 {
@@ -1719,10 +1508,6 @@ body {
     .home-page {
         min-height: auto;
         padding: 20px 10px;
-    }
-
-    .burger-section {
-        height: 300px;
     }
 
     h1 {
