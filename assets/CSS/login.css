@@ -500,6 +500,23 @@
     background: #f0f0f0;
     color: #333;
 }
+#password-strength-container {
+    margin-top: 5px;
+}
+
+#password-strength-bar {
+    height: 100%;
+    width: 0%;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+#password-strength-text {
+    font-size: 12px;
+    margin-top: 2px;
+    display: block;
+    font-weight: 500;
+}
 
 /* Responsive Design */
 @media (max-width: 968px) {

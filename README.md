@@ -33,6 +33,7 @@ Chulo/
 ├── AboutUS.html            # Company information and team details
 ├── login.html              # User login page
 ├── signup.html             # New user registration page
+├── config.php              # Connect Database
 ├── README.md               # Project documentation
 │
 ├── assets/                 # Asset directory
@@ -45,6 +46,8 @@ Chulo/
 │   │   ├── signup.js       # Registration form handling
 │   │   ├── slider.js       # Image slider functionality
 │   │   └── ui-enhancer.js  # UI enhancement utilities
+│   │   └── signup.php      # Php File for registration
+│   │   └── login.php       # Php File for user login after registration
 │   │
 │   ├── CSS/                # Stylesheet directory
 │   │   ├── aboutus.css     # About page styles
