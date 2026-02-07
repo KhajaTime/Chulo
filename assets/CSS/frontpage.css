@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     margin-top: 6vh;
     font-family: 'Arial', sans-serif;
@@ -1041,6 +1040,8 @@ body {
     }
 
     .burger-section {
+        padding-left: 40px;
+        justify-self: flex-end;
         width: 600px;
         height: 500px;
     }
@@ -1079,23 +1080,28 @@ body {
     .home-page {
         padding: 40px 20px;
     }
-
+    
     .container {
+
         grid-template-columns: 1fr;
-        margin-left: 0;
+        margin-right: 0;
         padding: 20px;
         gap: 20px;
+        justify-items: center;
     }
-
+    
     .home-page .container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-
+    
     .info-section {
         max-width: 100%;
         margin-bottom: 40px;
+    }
+    .tags{
+        justify-content: center;
     }
 
     h1 {
@@ -1119,9 +1125,7 @@ body {
     }
 
     .burger-section {
-        width: 500px;
-        height: 450px;
-        margin: 0 auto;
+        display: none;
     }
 
     .burger-wrapper {
