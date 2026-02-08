@@ -768,9 +768,9 @@ body.dark-mode {
     position: absolute;
     top: 25px;
     right: 25px;
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: var(--bg-secondary);
+    color: var(--primary);
+    border: 2px solid var(--border-color);
     backdrop-filter: blur(10px);
     width: 45px;
     height: 45px;
@@ -785,10 +785,10 @@ body.dark-mode {
 }
 
 .dialog-close:hover {
-    background: white;
+    background: var(--bg-primary);
     color: var(--primary);
     transform: rotate(90deg) scale(1.1);
-    border-color: white;
+    border-color: var(--border-color);
 }
 
 /* Responsive Design */

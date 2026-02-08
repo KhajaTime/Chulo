@@ -29,6 +29,24 @@ body {
     z-index: 2;
     pointer-events: none;
 }
+.home-page::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 250px;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        color-mix(in srgb, var(--bg-primary) 10%, transparent) 30%,
+        color-mix(in srgb, var(--bg-primary) 40%, transparent) 50%,
+        color-mix(in srgb, var(--bg-primary) 70%, transparent) 70%,
+        color-mix(in srgb, var(--bg-primary) 91.6%, transparent) 85%,
+        var(--bg-primary) 100%
+    );
+    pointer-events: none;
+}
 
 .container {
     width: 100%;

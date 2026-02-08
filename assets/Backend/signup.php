@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("sss", $username, $email, $hashed_password);
     
     if ($stmt->execute()) {
-        echo json_encode(['success' => true, 'message' => 'Registration successful! Redirecting to login...']);
+        echo json_encode(['success' => true, 'message' => '']);
     } else {
         echo json_encode(['success' => false, 'message' => 'Registration failed. Please try again.']);
     }

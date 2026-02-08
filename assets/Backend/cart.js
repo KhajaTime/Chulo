@@ -264,7 +264,7 @@ function showConfirmationModal(title, message, onConfirm) {
 // Checkout - Show Mock Payment Modal
 function checkout() {
     if (cart.length === 0) {
-        console.log('Your cart is empty!', 'error');
+        alert('Your cart is empty!', 'error');
         return;
     }
 

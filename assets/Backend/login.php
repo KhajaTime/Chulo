@@ -36,8 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['is_admin'] = $user['is_admin'];
         $_SESSION['logged_in'] = true;
         
-        $message = $user['is_admin'] ? 'Admin login successful!' : 'Login successful!';
-        
         echo json_encode([
             'success' => true,
             'message' => $message,
